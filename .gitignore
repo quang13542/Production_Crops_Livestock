@@ -1,0 +1,18 @@
+# Virtualenv
+venv/
+.venv/
+env/
+
+dataset/ConsumerPriceIndices_E_All_Data/**
+dataset/Deflators_E_All_Data/**
+dataset/Prices_E_All_Data/**
+dataset/Production_Crops_Livestock_E_All_Data/**
+dataset/Trade_CropsLivestock_E_All_Data/**
+dataset/Trade_DetailedTradeMatrix_E_All_Data/**
+dataset/ConsumerPriceIndices_E_All_Data.zip
+dataset/Deflators_E_All_Data.zip
+dataset/Prices_E_All_Data.zip
+dataset/Production_Crops_Livestock_E_All_Data.zip
+dataset/Trade_CropsLivestock_E_All_Data.zip
+dataset/Trade_DetailedTradeMatrix_E_All_Data.zip
+dataset/UNSD_Methodology.csv
