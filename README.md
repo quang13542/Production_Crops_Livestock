@@ -44,7 +44,7 @@ Here is the schema for the project (yellow tables are fact tables and white-colo
 # HOW TO INSTALL (in Windows)
 
 * Install Java 8
-* Download Apache Spark in [here](https://spark.apache.org/downloads.html) and install it in local machine.
+* Download Apache Spark in [here](https://spark.apache.org/downloads.html) and install it in local machine. The version of Spark in this project is 3.4.1.
 * Set environment variables: Add the Spark installation directory to the system's `PATH` environment variable. Additionally, set the `HADOOP_HOME` and `JAVA_HOME` environment variables to the corresponding paths for your Hadoop and Java installations (if applicable).
 
 Configure Spark: In the Spark installation directory, find the `conf` folder and locate the `spark-env.sh.template` file. Create a copy of this file and rename it to `spark-env.sh`.
@@ -58,7 +58,7 @@ pip install -r requirements.txt
 ```
 Remember that the release of PySpark and Apache Spark is the same. You can download the release of Apache Spark 3.4 or you can change the release of PySpark to the release of Apache Spark.
 
-* Download Apache Hadoop in [here](https://hadoop.apache.org/releases.html) and install it in local machine.
+* Download Apache Hadoop in [here](https://hadoop.apache.org/releases.html) and install it in local machine. The version of Hadoop in this project is 3.3.6.
 
 The versions of Hadoop and Apache Spark do not conflict.
 
@@ -86,4 +86,4 @@ Run all functions in `extract.py` file to get the dataset
 
 * Transform
 
-Run all file with have prefix `transform_` file to transform and load data to dataset
+Run all file with have prefix `transform_` to transform and load data to HDFS as a Data Warehouse.
