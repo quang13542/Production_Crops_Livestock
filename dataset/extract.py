@@ -1,11 +1,13 @@
+import sys
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 import zipfile
-
 # Set the download directory path
 import os
-download_dir = os.getcwd()
+
+download_dir = os.path.dirname(os.path.realpath(__file__))
+
 DATASET_NAME = [
     'ConsumerPriceIndices_E_All_data',
     'Deflators_E_All_Data',
@@ -49,8 +51,8 @@ def get_zip():
 
 def unzip_dataset():
     for name in DATASET_NAME:
-        folder_name = os.path.join(download_dir, 'dataset')
-        folder_name = os.path.join(folder_name, name)
+        # folder_name = os.path.join(download_dir, 'dataset')
+        folder_name = os.path.join(download_dir, name)
         for file in os.listdir(folder_name):
             file_path = os.path.join(folder_name, file)
             print(file_path)
@@ -59,3 +61,8 @@ def unzip_dataset():
         with zipfile.ZipFile(f'{folder_name}.zip', 'r') as zip:
             zip.extractall(path=folder_name)
         os.remove(f'{folder_name}.zip')
+
+
+# if __name__ == '__main__':
+    # get_zip()
+    # unzip_dataset()
