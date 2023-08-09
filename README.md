@@ -54,7 +54,7 @@ Edit the `spark-env.sh` file and add the following line at the end:
 SPARK_LOCAL_IP=127.0.0.1
 * Install dependencies
 ```
-pip install -r requirements.txt
+& pip install -r requirements.txt
 ```
 Remember that the release of PySpark and Apache Spark is the same. You can download the release of Apache Spark 3.4 or you can change the release of PySpark to the release of Apache Spark.
 
@@ -64,19 +64,19 @@ The versions of Hadoop and Apache Spark do not conflict.
 
 * Run Hadoop
 ```
-start-all.cmd
+& start-all.cmd
 ```
 
 * Start the Spark cluster
 
 Open a command prompt and navigate to the Spark installation directory. Run the following command to start the Spark master:
 ```
-spark-class org.apache.spark.deploy.master.Master
+& spark-class org.apache.spark.deploy.master.Master
 ```
 
 Open others command prompts (each command will open a port as worker node):
 ```
-spark-class org.apache.spark.deploy.worker.Worker spark://127.0.0.1:7077
+& spark-class org.apache.spark.deploy.worker.Worker spark://127.0.0.1:7077
 ```
 These commands start the Spark master and worker nodes on your local machine.
 
@@ -87,3 +87,14 @@ Run all functions in `extract.py` file to get the dataset
 * Transform
 
 Run all file with have prefix `transform_` to transform and load data to HDFS as a Data Warehouse.
+
+
+* To automate the process
+```
+& airflow db init
+& airflow db check
+```
+If Connection successful, run:
+```
+& python dag.py
+```
