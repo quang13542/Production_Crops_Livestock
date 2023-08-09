@@ -41,7 +41,7 @@ Disadvantage: It is much more complex and hence, hard to implement and maintain.
 Here is the schema for the project (yellow tables are fact tables and white-colored ones are dimensional tables):
 ![Production_Crops_Livestock](images/Production_Crops_Livestock.png)
 
-# HOW TO INSTALL (in Windows)
+# HOW TO INSTALL (on Windows)
 
 * Install Java 8
 * Download Apache Spark in [here](https://spark.apache.org/downloads.html) and install it in local machine. The version of Spark in this project is 3.4.1.
